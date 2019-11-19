@@ -4,35 +4,65 @@
  * construct available in Javascript.
  */
 
-// ...
+// const a = Math.max( );
+
+const max = (firstNum, secondNum) => {
+  if (firstNum > secondNum) {
+    return firstNum
+  } else {
+    return secondNum
+  }
+}
 
 /**
  * 2) Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
 
-// ...
+const maxOfThree = (firstNum, secondNum, thirdNum) => {
+  let result = Math.max(firstNum, secondNum, thirdNum)
+  return result
+}
 
 /*
  * 3) Define a function sum() that takes two numbers as
  * arguments and computes the sum of those two numbers.
  */
 
-// ...
+const sum = (firstNum, secondNum) => {
+  return firstNum + secondNum
+}
 
 /*
  * 4) Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
 
-// ...
+const sumOfArray = numbers => {
+  return numbers.reduce((a, b) => {
+    return a + b
+  }, 0)
+}
 
 /**
  * 5) Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
 
-// ...
+const isVowel = character => {
+  const myCharacter = character.toLowerCase()
+  if (
+    myCharacter === 'a' ||
+    myCharacter === 'e' ||
+    myCharacter === 'i' ||
+    myCharacter === 'o' ||
+    myCharacter === 'u'
+  ) {
+    return true
+  } else {
+    return false
+  }
+}
 
 /**
  * 6) Write a function rovarspraket() that will translate
@@ -43,7 +73,8 @@
  * return the string "tothohisos isos fofunon".
  */
 
-// ...
+const rovarspraket()
+
 
 /**
  * 7) Define a function reverse() that computes
@@ -52,7 +83,13 @@
  * string "books".
  */
 
-// ...
+const reverse = myString => {
+  let revString = []
+  for (let i = myString.length; i >= 0; i--) {
+    revString.push(myString[i])
+  }
+  return revString.join('')
+}
 
 /**
  * 8) Write a function findLongestWord() that takes an
@@ -61,7 +98,16 @@
  * i.e. findLongestWord("book dogs") should return "book"
  */
 
-// ...
+const findLongestWord = string => {
+  let longestWord = ''
+  const words = string.split(' ')
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i]
+    }
+  }
+  return longestWord
+}
 
 /**
  * NOTE: Don't modify anything below this line...
